@@ -2,7 +2,7 @@
 
 function pairwise(arr, arg) {
     var combinations = [];
-    var thisVariableIsAnUpdateOfArr = arr;
+    var thisVariableIsAnUpdateOfArr = JSON.parse(JSON.stringify(arr));
     console.log(arr);
     console.log("why don't the two console.log's equal the same thing? I never update arr");
     combinations = findPairsThatAddUpToArgWithDuplicates(thisVariableIsAnUpdateOfArr, arg, combinations);
@@ -25,6 +25,10 @@ function findPairsThatAddUpToArgWithDuplicates(thisVariableIsAnUpdateOfArr, arg,
     }
 
     return combinations;
+}
+
+function returnTrue(){
+    return true;
 }
 
 /*function reverseThenTestAndRemoveDupes (combinations){
